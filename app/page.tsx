@@ -69,7 +69,7 @@ export default function Home() {
   }, [messages]);
 
   return (
-    <div className="h-screen bg-gradient-to-b from-gray-950 to-gray-900 text-gray-100 p-6 flex flex-col items-center relative">
+    <div className="min-h-screen bg-gradient-to-b from-gray-950 to-gray-900 text-gray-100 p-6 flex flex-col items-center relative">
       <header className="w-full max-w-2xl text-center py-6 space-y-2">
         <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 to-fuchsia-600 bg-clip-text text-transparent">
           Groq Voice AI
