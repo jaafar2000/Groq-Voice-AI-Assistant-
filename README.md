@@ -41,6 +41,13 @@ Groq has:
 
 Avoid rapid repeated recordings or TTS spam.
 
+---
+## Overview
+### Desktop  
+![Desktop](./public/images/2.png)
+
+
+
 ## **Links**
 **Live Site:** [GROQ voice AI](https://groq-voice-ai-assistant.vercel.app/)
 
