@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **Groq Voice AI Assistant (Next.js 16)**
 
-## Getting Started
+A fully-functional voice-controlled AI assistant built with **Next.js 16**, **Groq LLaMA 3.1**, **Whisper Large V3**, and **Groq TTS**.
+The app allows users to:
 
-First, run the development server:
+* Record voice
+* Transcribe speech to text
+* Stream AI responses token-by-token
+* Convert AI text back to audio
+* Play the voice output instantly
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Everything runs on **Edge runtime** for maximum speed.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## **Features**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **Voice Input**
 
-## Learn More
+Record audio directly in the browser using `MediaRecorder`.
 
-To learn more about Next.js, take a look at the following resources:
+### **Whisper Transcription**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Audio is sent to `/api/transcribe` where Groq Whisper Large V3 turns speech → text.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### **AI Chat Response (Streaming)**
 
-## Deploy on Vercel
+Text is sent to `/api/chat`, which streams responses from LLaMA 3.1 in real-time.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### **Text-to-Speech Output**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Final AI text is sent to `/api/speak` and returned as playable audio.
+
+
+## **API Limitations**
+
+Groq has:
+
+* Rate limits
+* Total audio length limits
+* Model request caps
+
+Avoid rapid repeated recordings or TTS spam.
+
+## **Links**
+**Live Site:** [GROQ voice AI]()
+
+
+## **Technologies Used**
+
+* **Next.js 16**
+* **TypeScript**
+* **Groq Whisper Large V3**
+* **Groq LLaMA 3.1**
+* **Groq TTS**
+* **Tailwind CSS**
+* **React Hooks**
+* **Edge Runtime**
+
+## Author
+- LinkedIn – [Jaafar Youssef](https://www.linkedin.com/in/jaafar-youssef-923100249/)
+
+
+## License
+
+For personal use and learning. Not intended for heavy commercial scraping.
