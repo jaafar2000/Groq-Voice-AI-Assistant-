@@ -1,26 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+}
+.scroll-custom::-webkit-scrollbar {
+  width: 6px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.scroll-custom::-webkit-scrollbar-track {
+  background: #1f1f1f;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.scroll-custom::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #a855f7, #d946ef);
+  border-radius: 10px;
+}
+
+.scroll-custom::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #c084fc, #e879f9);
+}
+@keyframes record-glow {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateY(-15px);
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 0.45;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-record-glow {
+  animation: record-glow 2.8s ease-in-out infinite;
+  will-change: transform, opacity;
 }
