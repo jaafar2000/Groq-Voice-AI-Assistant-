@@ -42,7 +42,7 @@ Groq has:
 Avoid rapid repeated recordings or TTS spam.
 
 ## **Links**
-**Live Site:** [GROQ voice AI]()
+**Live Site:** [GROQ voice AI](https://groq-voice-ai-assistant.vercel.app/)
 
 
 ## **Technologies Used**
