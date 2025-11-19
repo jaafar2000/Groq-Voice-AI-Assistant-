@@ -25,10 +25,9 @@ export async function POST(req: Request) {
     const text = (transcription as any)?.text;
 
     if (!text || text.trim().length === 0) {
-      return new NextResponse(
-        "I couldn't hear you clearly. Try again.",
-        { status: 400 }
-      );
+      return new NextResponse("I couldn't hear you clearly. Try again.", {
+        status: 400,
+      });
     }
 
     return new NextResponse(text, {
@@ -36,9 +35,8 @@ export async function POST(req: Request) {
     });
   } catch (err) {
     console.error("Transcription API Error:", err);
-    return new NextResponse(
-      "Transcription failed. Try again.",
-      { status: 500 }
-    );
+    return new NextResponse("Transcription failed. Try again.", {
+      status: 500,
+    });
   }
 }
