@@ -69,4 +69,4 @@ Avoid rapid repeated recordings or TTS spam.
 
 ## License
 
-For personal use and learning. Not intended for heavy commercial scraping.
+For personal use and learning. 
